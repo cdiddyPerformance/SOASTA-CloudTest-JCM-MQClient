@@ -12,6 +12,7 @@ Java JDK 1.7
 * cloudtest-scripting-environment.jar 
 
 ##Export
+AMQP.xml.zip CloudTest Export Contains
 * rabbitmq-client - Java Module Dependent Library 
 * soasta-amqp - Java Module Client Wrapper 
 * AMPQ-Publish Clip - Sample Clip that calls AMQP-Publish 
