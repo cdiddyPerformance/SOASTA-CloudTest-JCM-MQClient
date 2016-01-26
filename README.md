@@ -5,17 +5,17 @@ AMQP Client Java Custom Module for SOASTA CloudTest is an easy-to-use wrapper ar
 Java JDK 1.7
 
 ###rabbitmq client API
-* rabbitmq-client.jar 3.6 1
+* rabbitmq-client.jar 3.6
 
 ###Soasta Custom Scripting Module API
-* cloudtest-plugin-api.jar 1
-* cloudtest-scripting-environment.jar 2
+* cloudtest-plugin-api.jar 
+* cloudtest-scripting-environment.jar 
 
 ##Export
-* rabbitmq-client - Java Module Dependent Library 1
-* soasta-amqp - Java Module Client Wrapper 2
-* AMPQ-Publish Clip - Sample Clip that calls AMQP-Publish 3
-* AMQP-Publish - Sample Script that uses the soasta-amqp JCM to publish a message 4 
+* rabbitmq-client - Java Module Dependent Library 
+* soasta-amqp - Java Module Client Wrapper 
+* AMPQ-Publish Clip - Sample Clip that calls AMQP-Publish 
+* AMQP-Publish - Sample Script that uses the soasta-amqp JCM to publish a message  
 
 ```javascript
 importPackage(org.soasta.amqp);
