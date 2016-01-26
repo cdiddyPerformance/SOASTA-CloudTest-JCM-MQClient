@@ -17,5 +17,14 @@ Java JDK 1.7
 * AMPQ-Publish Clip - Sample Clip that calls AMQP-Publish 3
 * AMQP-Publish - Sample Script that uses the soasta-amqp JCM to publish a message 4 
 
+```javascript
+importPackage(org.soasta.amqp);
+var amqpClient = new SimpleClient($context.createJavaEnvironment());
+var message = "Hello World!";
+var queueName = "test";
+var host ="amqp://server.compute-1.amazonaws.com";
+amqpClient.publish(message,queueName,host);
+```
+
 ##References
 https://www.rabbitmq.com/java-client.html
