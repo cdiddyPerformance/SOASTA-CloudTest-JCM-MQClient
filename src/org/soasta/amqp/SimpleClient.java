@@ -19,10 +19,8 @@ public class SimpleClient {
 		environment = inputEnvironment;
 	}
 
-	public static void openConnection(String uri,
-			ScriptEnvironment inputEnvironment) {
+	public static void setEnvironment(ScriptEnvironment inputEnvironment) {
 		environment = inputEnvironment;
-		openConnection(uri);
 	}
 
 	public static void openConnection(String uri) {
@@ -32,7 +30,7 @@ public class SimpleClient {
 					.getContext()
 					.getResult()
 					.postMessage(ResultLevel.INFO,
-							" Oppening Connection to'" + uri + "'");
+							" Opening Connection to'" + uri + "'");
 			conn = cfconn.newConnection();
 		} catch (Exception e) {
 			environment
@@ -41,12 +39,6 @@ public class SimpleClient {
 					.postMessage(ResultLevel.ERROR,
 							" Error '" + e.getMessage() + "'");
 		}
-	}
-
-	public static void openQueue(String queueName,
-			ScriptEnvironment inputEnvironment) {
-		environment = inputEnvironment;
-		openQueue(queueName);
 	}
 
 	public static void openQueue(String queueName) {
@@ -103,17 +95,6 @@ public class SimpleClient {
 		}
 	}
 
-	public static void publish(String message, String queueName,
-			ScriptEnvironment inputEnvironment) {
-		environment = inputEnvironment;
-		publish(message, queueName);
-	}
-
-	public static void closeQueue(ScriptEnvironment inputEnvironment) {
-		environment = inputEnvironment;
-		closeQueue();
-	}
-
 	public static void closeQueue() {
 		try {
 			channel.close();
@@ -130,11 +111,6 @@ public class SimpleClient {
 					.postMessage(ResultLevel.ERROR,
 							" TimeoutException '" + e.getMessage() + "'");
 		}
-	}
-
-	public static void closeConnection(ScriptEnvironment inputEnvironment) {
-		environment = inputEnvironment;
-		closeConnection();
 	}
 
 	public static void closeConnection() {
