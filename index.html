@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Soasta-cloudtest-jcm-mqclient by cdiddyPerformance</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Soasta-cloudtest-jcm-mqclient</h1>
+        <p>AMQP Client Java Custom Module for SOASTA CloudTest</p>
+
+        <p class="view"><a href="https://github.com/cdiddyPerformance/SOASTA-CloudTest-JCM-MQClient">View the Project on GitHub <small>cdiddyPerformance/SOASTA-CloudTest-JCM-MQClient</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/cdiddyPerformance/SOASTA-CloudTest-JCM-MQClient/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cdiddyPerformance/SOASTA-CloudTest-JCM-MQClient/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cdiddyPerformance/SOASTA-CloudTest-JCM-MQClient">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="soasta-cloudtest-jcm-mqclient" class="anchor" href="#soasta-cloudtest-jcm-mqclient" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SOASTA-CloudTest-JCM-MQClient</h1>
+
+<p>AMQP Client Java Custom Module for SOASTA CloudTest is an easy-to-use wrapper around the rabbitmq java library.</p>
+
+<h2>
+<a id="pre-requisites" class="anchor" href="#pre-requisites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre-requisites</h2>
+
+<p>Java JDK 1.7</p>
+
+<h3>
+<a id="rabbitmq-client-api" class="anchor" href="#rabbitmq-client-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>rabbitmq client API</h3>
+
+<ul>
+<li>rabbitmq-client.jar 3.6</li>
+</ul>
+
+<h3>
+<a id="soasta-custom-scripting-module-api" class="anchor" href="#soasta-custom-scripting-module-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Soasta Custom Scripting Module API</h3>
+
+<ul>
+<li>cloudtest-plugin-api.jar </li>
+<li>cloudtest-scripting-environment.jar </li>
+</ul>
+
+<h2>
+<a id="export" class="anchor" href="#export" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Export</h2>
+
+<p>AMQP.xml.zip CloudTest Export Contains</p>
+
+<ul>
+<li>rabbitmq-client - Java Module Dependent Library </li>
+<li>soasta-amqp - Java Module Client Wrapper </li>
+<li>AMPQ-Publish Clip - Sample Clip that calls AMQP-Publish </li>
+<li>AMQP-Publish - Sample Script that uses the soasta-amqp JCM to publish a message<br>
+</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">importPackage</span>(<span class="pl-smi">org</span>.<span class="pl-smi">soasta</span>.<span class="pl-smi">amqp</span>);
+<span class="pl-k">var</span> amqpClient <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">SimpleClient</span>(<span class="pl-smi">$context</span>.<span class="pl-en">createJavaEnvironment</span>());
+<span class="pl-k">var</span> message <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>;
+<span class="pl-k">var</span> queueName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>test<span class="pl-pds">"</span></span>;
+<span class="pl-k">var</span> host <span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>amqp://server.compute-1.amazonaws.com<span class="pl-pds">"</span></span>;
+<span class="pl-smi">amqpClient</span>.<span class="pl-en">publish</span>(message,queueName,host);</pre></div>
+
+<h2>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+
+<p><a href="https://www.rabbitmq.com/java-client.html">https://www.rabbitmq.com/java-client.html</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/cdiddyPerformance">cdiddyPerformance</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
